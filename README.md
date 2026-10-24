@@ -48,9 +48,9 @@ En Google Colab no hace falta instalar nada: la primera celda detecta que está 
 | Problema | Modelo | Transformaciones | Resultado en test |
 |---|---|---|---|
 | Costes médicos | Regresión Lineal con CrossValidator (5 folds) | StringIndexer y OneHotEncoder de smoker; VectorAssembler de age, bmi y smoker; StandardScaler en un Pipeline junto a la regresión | MAE ≈ 4.288 dólares (≈ 32 % del cargo medio). Mejores hiperparámetros: regParam 2.0, elasticNetParam 1.0, maxIter 10 |
-| Costes médicos | Random Forest con CrossValidator (5 folds) | Las mismas, sin escalado (los árboles no lo necesitan) | **MAE ≈ 3.353 dólares** (≈ 25 % del cargo medio). Mejores hiperparámetros: numTrees 50, maxDepth 20 |
+| Costes médicos | Random Forest con CrossValidator (5 folds) | Las mismas, sin escalado (los árboles no lo necesitan) | **MAE ≈ 3.209 dólares** (≈ 24 % del cargo medio). Mejores hiperparámetros: numTrees 10, maxDepth 20 |
 
-Los dos modelos se entrenan y evalúan con **el mismo reparto** de entrenamiento (80 %) y prueba (20 %). Se elige el **Random Forest**: se equivoca de media 934 dólares menos (un 22 % menos de error).
+Los dos modelos se entrenan y evalúan con **el mismo reparto** de entrenamiento (80 %) y prueba (20 %). Se elige el **Random Forest**: se equivoca de media 1.079 dólares menos (un 25 % menos de error).
 
 ## 📓 Notebook
 
@@ -68,4 +68,4 @@ En [Practica_final_pyspark_Fer_mez_FINAL.ipynb](Practica_final_pyspark_Fer_mez_F
 - Lo que más encarece el seguro es **ser fumador**: los fumadores pagan casi 4 veces más (32.050 frente a 8.441 de media).
 - La **edad** sube los cargos en todos los clientes, y el **BMI** solo encarece de verdad en los fumadores: un fumador con BMI por encima de 30 paga entre 35.000 y 50.000.
 - El sexo, la región y el número de hijos apenas influyen: sus diferencias se explican por la proporción de fumadores de cada grupo.
-- El **Random Forest** se equivoca menos que la Regresión Lineal (MAE de 3.353 frente a 4.288 dólares), así que es el modelo elegido.
+- El **Random Forest** se equivoca menos que la Regresión Lineal (MAE de 3.209 frente a 4.288 dólares), así que es el modelo elegido.
