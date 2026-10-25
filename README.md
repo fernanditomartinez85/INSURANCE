@@ -36,11 +36,11 @@ Dataset público de costes médicos de un seguro de salud en EE. UU. ([fuente](h
 
 Python 3 con **pyspark 4.0.4**, matplotlib y seaborn, y **Java 17**. La versión 4.0.0 de pyspark falla en Windows, por eso se fija la 4.0.4.
 
-En Google Colab no hace falta instalar nada: la primera celda detecta que está en Colab e instala pyspark 4.0.4 y Java 17.
+En Google Colab basta con quitar el `#` de las tres líneas de instalación de la primera celda de código, que instalan pyspark 4.0.4 y Java 17.
 
 ## ▶️ Ejecución
 
-- **Google Colab:** abrir el notebook, subir `insurance.csv` y ejecutar las celdas en orden.
+- **Google Colab:** abrir el notebook, quitar el `#` de las tres líneas de instalación de la primera celda de código, subir `insurance.csv` y ejecutar las celdas en orden.
 - **En local:** instalar pyspark 4.0.4 (`pip install pyspark==4.0.4`) y Java 17, y ejecutar el notebook desde la carpeta del proyecto.
 
 ## 🤖 Modelo
