@@ -56,9 +56,9 @@ Los dos modelos se entrenan y evalúan con **el mismo reparto** de entrenamiento
 
 En [Practica_final_pyspark_Fer_mez_FINAL.ipynb](Practica_final_pyspark_Fer_mez_FINAL.ipynb) se hace el análisis exploratorio y se entrenan los modelos:
 
-- **Carga y descripción de los datos:** no hay valores nulos y se elimina un registro duplicado. Matriz de correlación incluyendo fumador (0/1).
+- **Carga y descripción de los datos:** no hay valores nulos y se elimina un registro duplicado.
 - **Análisis univariante:** distribución de edad, BMI, hijos, sexo, fumador, región y costes.
-- **Análisis bivariante:** relación de cada variable con los costes, separando fumadores y no fumadores, y porcentaje de fumadores por sexo, hijos y región.
+- **Análisis bivariante:** matriz de correlación (con fumador como 1/0), relación de cada variable con los costes, separando fumadores y no fumadores, y porcentaje de fumadores por sexo, hijos y región.
 - **Regresión lineal:** conversión a DataFrame de Spark, StringIndexer, OneHotEncoder, VectorAssembler y StandardScaler; búsqueda de hiperparámetros con ParamGridBuilder y CrossValidator; mejores hiperparámetros y coeficientes.
 - **Random Forest:** mismo proceso con RandomForestRegressor y los mismos datos de entrenamiento y prueba, y comparación con la Regresión Lineal.
 - **Conclusiones:** hallazgos, limitaciones y próximos pasos.
